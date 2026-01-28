@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog DriveFlow : Conseils, guides et actualités sur le convoyage automobile. Tout savoir sur le transport de véhicules en France et Europe.">
+    <meta name="keywords" content="blog convoyage, conseils transport voiture, guide livraison véhicule, actualités automobile">
+    <title>Blog - Conseils & Guides Convoyage | DriveFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        .blog-hero { background: linear-gradient(135deg, #2C5F9D, #00A8E8); color: white; padding: 4rem 0; text-align: center; }
+        .blog-hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 2rem; padding: 4rem 0; }
+        .blog-card { background: white; border-radius: 1rem; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: 0.3s; }
+        .blog-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.15); }
+        .blog-card-image { width: 100%; height: 220px; background: linear-gradient(135deg, #e9ecef, #dee2e6); display: flex; align-items: center; justify-content: center; font-size: 4rem; color: #2C5F9D; }
+        .blog-card-content { padding: 1.5rem; }
+        .blog-card-meta { display: flex; gap: 1rem; margin-bottom: 1rem; font-size: 0.875rem; color: #6c757d; }
+        .blog-card-meta i { color: #2C5F9D; }
+        .blog-card h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 0.75rem; color: #1a1a1a; }
+        .blog-card p { color: #6c757d; line-height: 1.7; margin-bottom: 1rem; }
+        .blog-card-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1rem; }
+        .tag { background: #e3f2fd; color: #2C5F9D; padding: 0.25rem 0.75rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 500; }
+        .blog-card .btn { width: 100%; }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Blog",
+        "name": "Blog DriveFlow - Convoyage Automobile",
+        "description": "Guides et conseils sur le convoyage de véhicules en France et Europe",
+        "url": "https://driveflow.fr/blog.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "DriveFlow",
+            "logo": {"@type": "ImageObject", "url": "https://driveflow.fr/images/logo.png"}
+        }
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><img src="images/logo.png" alt="DriveFlow"><span class="logo-text">DriveFlow</span></div>
+                <nav class="nav"><ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="professionnels.html" class="nav-link">Professionnels</a></li>
+                    <li><a href="particuliers.html" class="nav-link">Particuliers</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="blog.html" class="nav-link active">Blog</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul></nav>
+                <div class="header-actions">
+                    <a href="tel:+33651507834" class="btn-phone"><i class="fas fa-phone"></i> 06 51 50 78 34</a>
+                    <a href="devis.html" class="btn btn-primary">Devis gratuit</a>
+                </div>
+                <button class="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="blog-hero">
+        <div class="container">
+            <h1>Blog DriveFlow</h1>
+            <p style="font-size: 1.25rem;">Conseils, guides et actualités sur le convoyage automobile</p>
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-card-image"><i class="fas fa-car"></i></div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="fas fa-calendar"></i> 15 janvier 2026</span>
+                            <span><i class="fas fa-clock"></i> 8 min</span>
+                        </div>
+                        <h3>Comment faire convoyer une voiture en toute sécurité ?</h3>
+                        <p>Découvrez notre guide complet pour organiser le convoyage de votre véhicule sans stress. Démarches, documents, assurance : tout ce qu'il faut savoir.</p>
+                        <div class="blog-card-tags">
+                            <span class="tag">Convoyage</span>
+                            <span class="tag">Guide</span>
+                            <span class="tag">Sécurité</span>
+                        </div>
+                        <a href="blog/comment-faire-convoyer-voiture.html" class="btn btn-outline">Lire l'article</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image"><i class="fas fa-euro-sign"></i></div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="fas fa-calendar"></i> 12 janvier 2026</span>
+                            <span><i class="fas fa-clock"></i> 6 min</span>
+                        </div>
+                        <h3>Prix du convoyage voiture : combien ça coûte vraiment ?</h3>
+                        <p>Tarifs moyens, facteurs de prix, astuces pour économiser : tout savoir sur le coût d'un convoyage de véhicule en France et en Europe.</p>
+                        <div class="blog-card-tags">
+                            <span class="tag">Prix</span>
+                            <span class="tag">Tarifs</span>
+                            <span class="tag">Budget</span>
+                        </div>
+                        <a href="blog/prix-convoyage-voiture.html" class="btn btn-outline">Lire l'article</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image"><i class="fas fa-shopping-cart"></i></div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="fas fa-calendar"></i> 8 janvier 2026</span>
+                            <span><i class="fas fa-clock"></i> 7 min</span>
+                        </div>
+                        <h3>Acheter une voiture d'occasion loin de chez soi : mode d'emploi</h3>
+                        <p>Les étapes essentielles pour acheter un véhicule à distance en toute sérénité. Vérifications, transport, livraison : nos conseils d'experts.</p>
+                        <div class="blog-card-tags">
+                            <span class="tag">Achat</span>
+                            <span class="tag">Occasion</span>
+                            <span class="tag">Livraison</span>
+                        </div>
+                        <a href="blog/acheter-voiture-loin.html" class="btn btn-outline">Lire l'article</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image"><i class="fas fa-id-card"></i></div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="fas fa-calendar"></i> 5 janvier 2026</span>
+                            <span><i class="fas fa-clock"></i> 5 min</span>
+                        </div>
+                        <h3>Plaque W Garage : tout comprendre sur cette immatriculation professionnelle</h3>
+                        <p>Qu'est-ce qu'une plaque W ? Qui peut l'utiliser ? Pourquoi est-elle obligatoire pour le convoyage professionnel ? On vous explique tout.</p>
+                        <div class="blog-card-tags">
+                            <span class="tag">Réglementation</span>
+                            <span class="tag">Plaque W</span>
+                            <span class="tag">Pro</span>
+                        </div>
+                        <a href="blog/plaque-w-garage.html" class="btn btn-outline">Lire l'article</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image"><i class="fas fa-wrench"></i></div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="fas fa-calendar"></i> 2 janvier 2026</span>
+                            <span><i class="fas fa-clock"></i> 6 min</span>
+                        </div>
+                        <h3>Véhicule en panne : comment organiser son transport rapidement ?</h3>
+                        <p>Panne mécanique, accident, immobilisation : découvrez les solutions pour faire transporter votre véhicule chez le garagiste en urgence.</p>
+                        <div class="blog-card-tags">
+                            <span class="tag">Panne</span>
+                            <span class="tag">Urgence</span>
+                            <span class="tag">Dépannage</span>
+                        </div>
+                        <a href="blog/transport-voiture-panne.html" class="btn btn-outline">Lire l'article</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-card-image"><i class="fas fa-building"></i></div>
+                    <div class="blog-card-content">
+                        <div class="blog-card-meta">
+                            <span><i class="fas fa-calendar"></i> 28 décembre 2025</span>
+                            <span><i class="fas fa-clock"></i> 9 min</span>
+                        </div>
+                        <h3>Convoyage professionnel pour concessionnaires : optimisez votre logistique</h3>
+                        <p>Comment les concessionnaires automobiles peuvent améliorer leur efficacité opérationnelle grâce au convoyage externalisé. Avantages et ROI.</p>
+                        <div class="blog-card-tags">
+                            <span class="tag">B2B</span>
+                            <span class="tag">Concessionnaires</span>
+                            <span class="tag">Logistique</span>
+                        </div>
+                        <a href="blog/convoyage-concessionnaires.html" class="btn btn-outline">Lire l'article</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Besoin d'un convoyage professionnel ?</h2>
+                <p>Demandez votre devis gratuit en 2 minutes</p>
+                <div class="cta-buttons">
+                    <a href="devis.html" class="btn btn-primary btn-lg"><i class="fas fa-file-invoice"></i> Devis gratuit</a>
+                    <a href="tel:+33651507834" class="btn btn-white btn-lg"><i class="fas fa-phone"></i> 06 51 50 78 34</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo"><img src="images/logo.png" alt="DriveFlow"><span>DriveFlow</span></div>
+                    <p class="footer-tagline">Votre véhicule, notre expertise</p>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 DriveFlow. Tous droits réservés.</p></div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

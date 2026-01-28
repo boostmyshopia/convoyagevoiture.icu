@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Particuliers - DriveFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><img src="images/logo.png" alt="DriveFlow"><span class="logo-text">DriveFlow</span></div>
+                <nav class="nav"><ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="professionnels.html" class="nav-link">Professionnels</a></li>
+                    <li><a href="particuliers.html" class="nav-link active">Particuliers</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul></nav>
+                <div class="header-actions">
+                    <a href="tel:+33651507834" class="btn-phone"><i class="fas fa-phone"></i> 06 51 50 78 34</a>
+                    <a href="devis.html" class="btn btn-primary">Devis gratuit</a>
+                </div>
+                <button class="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+    <section class="hero" style="min-height:60vh;">
+        <div class="hero-background"><div class="hero-overlay"></div><img src="images/client-satisfait.jpg" alt="Clients satisfaits"></div>
+        <div class="container"><div class="hero-content">
+            <h1 class="hero-title">Convoyage pour Particuliers</h1>
+            <p class="hero-subtitle">Votre véhicule livré clé en main, partout en France et en Europe</p>
+            <div class="hero-cta">
+                <a href="devis.html" class="btn btn-primary btn-lg"><i class="fas fa-file-invoice"></i> Devis gratuit</a>
+                <a href="tel:+33651507834" class="btn btn-secondary btn-lg"><i class="fas fa-phone"></i> 06 51 50 78 34</a>
+            </div>
+        </div></div>
+    </section>
+    <section class="services-overview">
+        <div class="container">
+            <div class="section-header"><h2 class="section-title">Nos Services pour Particuliers</h2></div>
+            <div class="services-grid">
+                <div class="service-card"><div class="service-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <h3>Achat à distance</h3><p>Vous achetez votre voiture loin de chez vous ? On vous la livre !</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Livraison à domicile</li>
+                        <li><i class="fas fa-check"></i> État des lieux complet</li>
+                        <li><i class="fas fa-check"></i> Remise des clés en main propre</li>
+                    </ul>
+                </div>
+                <div class="service-card"><div class="service-icon"><i class="fas fa-exclamation-triangle"></i></div>
+                    <h3>Véhicule en panne</h3><p>Panne mécanique ? On ramène votre véhicule au garage</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Intervention rapide</li>
+                        <li><i class="fas fa-check"></i> Transport sécurisé</li>
+                        <li><i class="fas fa-check"></i> Service 24/7</li>
+                    </ul>
+                </div>
+                <div class="service-card"><div class="service-icon"><i class="fas fa-truck-moving"></i></div>
+                    <h3>Déménagement</h3><p>Vous déménagez ? Confiez-nous votre véhicule</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Planification flexible</li>
+                        <li><i class="fas fa-check"></i> Assurance tous risques</li>
+                        <li><i class="fas fa-check"></i> Livraison à votre nouvelle adresse</li>
+                    </ul>
+                </div>
+                <div class="service-card"><div class="service-icon"><i class="fas fa-handshake"></i></div>
+                    <h3>Vente entre particuliers</h3><p>Transaction sécurisée avec livraison à l'acheteur</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Paiement sécurisé possible</li>
+                        <li><i class="fas fa-check"></i> Livraison tracée</li>
+                        <li><i class="fas fa-check"></i> Contrôle état des lieux</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cta-section"><div class="container"><div class="cta-content">
+        <h2>Besoin de convoyer votre véhicule ?</h2>
+        <p>Demandez votre devis gratuit en 2 minutes</p>
+        <div class="cta-buttons">
+            <a href="devis.html" class="btn btn-primary btn-lg"><i class="fas fa-file-invoice"></i> Devis gratuit</a>
+            <a href="tel:+33651507834" class="btn btn-white btn-lg"><i class="fas fa-phone"></i> 06 51 50 78 34</a>
+        </div>
+    </div></div></section>
+    <footer class="footer"><div class="container">
+        <div class="footer-content"><div class="footer-column">
+            <div class="footer-logo"><img src="images/logo.png" alt="DriveFlow"><span>DriveFlow</span></div>
+            <p class="footer-tagline">Votre véhicule, notre expertise</p>
+        </div></div>
+        <div class="footer-bottom"><p>&copy; 2026 DriveFlow. Tous droits réservés.</p></div>
+    </div></footer>
+    <div class="chatbot" id="chatbot"></div>
+    <button class="chatbot-trigger" id="chatbotTrigger"><i class="fas fa-comments"></i></button>
+    <script src="js/main.js"></script>
+</body>
+</html>

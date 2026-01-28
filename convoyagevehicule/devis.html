@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Demandez votre devis de convoyage DriveFlow - Formulaire simple et gratuit">
+    <title>Devis Gratuit - DriveFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        .form-section { padding: 4rem 0; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); }
+        .form-container { max-width: 700px; margin: 0 auto; background: white; padding: 3rem; border-radius: 1rem; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .form-title { font-size: 2.5rem; font-weight: 700; text-align: center; margin-bottom: 1rem; color: #2C5F9D; }
+        .form-subtitle { text-align: center; color: #6c757d; margin-bottom: 2rem; font-size: 1.125rem; }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; color: #1a1a1a; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.875rem 1rem; border: 2px solid #e9ecef; border-radius: 0.5rem; font-family: inherit; font-size: 1rem; transition: 0.2s; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #2C5F9D; box-shadow: 0 0 0 3px rgba(44,95,157,0.1); }
+        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+        .form-group.required label::after { content: " *"; color: #dc3545; }
+        .form-submit { width: 100%; padding: 1rem; background: linear-gradient(135deg, #2C5F9D, #00A8E8); color: white; font-size: 1.125rem; font-weight: 600; border-radius: 0.5rem; cursor: pointer; transition: 0.3s; border: none; }
+        .form-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+        .form-info { background: #e3f2fd; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 2rem; border-left: 4px solid #2C5F9D; }
+        @media (max-width: 768px) { .form-row { grid-template-columns: 1fr; } .form-container { padding: 2rem 1.5rem; } }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><img src="images/logo.png" alt="DriveFlow"><span class="logo-text">DriveFlow</span></div>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Accueil</a></li>
+                        <li><a href="professionnels.html" class="nav-link">Professionnels</a></li>
+                        <li><a href="particuliers.html" class="nav-link">Particuliers</a></li>
+                        <li><a href="services.html" class="nav-link">Services</a></li>
+                        <li><a href="contact.html" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-actions">
+                    <a href="tel:+33651507834" class="btn-phone"><i class="fas fa-phone"></i> 06 51 50 78 34</a>
+                    <a href="devis.html" class="btn btn-primary">Devis gratuit</a>
+                </div>
+                <button class="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <section class="form-section">
+        <div class="container">
+            <div class="form-container">
+                <h1 class="form-title">Demande de Devis Gratuit</h1>
+                <p class="form-subtitle">Remplissez ce formulaire et recevez votre devis personnalisé sous 24h</p>
+                
+                <div class="form-info">
+                    <i class="fas fa-info-circle"></i> <strong>Service disponible 24/7</strong> • Réponse rapide garantie
+                </div>
+
+                <form id="devisForm">
+                    <div class="form-row">
+                        <div class="form-group required">
+                            <label for="nom">Nom complet</label>
+                            <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+                        </div>
+                        <div class="form-group required">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group required">
+                            <label for="telephone">Téléphone</label>
+                            <input type="tel" id="telephone" name="telephone" required placeholder="06 12 34 56 78">
+                        </div>
+                        <div class="form-group required">
+                            <label for="type_client">Type de client</label>
+                            <select id="type_client" name="type_client" required>
+                                <option value="">-- Sélectionnez --</option>
+                                <option value="professionnel">Professionnel (B2B)</option>
+                                <option value="particulier">Particulier (B2C)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group required">
+                        <label for="type_vehicule">Type de véhicule</label>
+                        <select id="type_vehicule" name="type_vehicule" required>
+                            <option value="">-- Sélectionnez --</option>
+                            <option value="citadine">Citadine</option>
+                            <option value="berline">Berline</option>
+                            <option value="suv">SUV</option>
+                            <option value="utilitaire">Utilitaire</option>
+                            <option value="luxe">Véhicule de luxe</option>
+                            <option value="collection">Véhicule de collection</option>
+                            <option value="moto">Moto/Scooter</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group required">
+                            <label for="depart">Ville de départ</label>
+                            <input type="text" id="depart" name="depart" required placeholder="Ex: Paris">
+                        </div>
+                        <div class="form-group required">
+                            <label for="arrivee">Ville d'arrivée</label>
+                            <input type="text" id="arrivee" name="arrivee" required placeholder="Ex: Marseille">
+                        </div>
+                    </div>
+
+                    <div class="form-group required">
+                        <label for="distance">Distance estimée (km)</label>
+                        <input type="number" id="distance" name="distance" required placeholder="500" min="1">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date_souhaitee">Date de convoyage souhaitée</label>
+                        <input type="date" id="date_souhaitee" name="date_souhaitee">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Informations complémentaires</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Précisez vos besoins spécifiques..."></textarea>
+                    </div>
+
+                    <button type="submit" class="form-submit">
+                        <i class="fas fa-paper-plane"></i> Envoyer ma demande de devis
+                    </button>
+                </form>
+
+                <p style="text-align: center; margin-top: 2rem; color: #6c757d; font-size: 0.875rem;">
+                    En soumettant ce formulaire, vous acceptez d'être contacté par DriveFlow concernant votre demande.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo"><img src="images/logo.png" alt="DriveFlow"><span>DriveFlow</span></div>
+                    <p class="footer-tagline">Votre véhicule, notre expertise</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <ul class="footer-contact">
+                        <li><i class="fas fa-phone"></i><a href="tel:+33651507834">06 51 50 78 34</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:driveflow.contact@gmail.com">driveflow.contact@gmail.com</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 DriveFlow. Tous droits réservés.</p></div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

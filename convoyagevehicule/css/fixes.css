@@ -1,0 +1,412 @@
+/* ========================================
+   CORRECTIONS DRIVEFLOW - Alignement & Images
+   À ajouter à la fin de style.css
+   ======================================== */
+
+/* === CORRECTION HEADER === */
+.header {
+    background-color: var(--color-white);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    gap: 2rem;
+    min-height: 70px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+    min-width: fit-content;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
+    object-fit: contain;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    white-space: nowrap;
+}
+
+/* Navigation alignée et espacée */
+.nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: var(--color-dark);
+    transition: 0.3s ease;
+    position: relative;
+    white-space: nowrap;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--color-primary);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Actions header bien alignées */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+}
+
+.btn-phone {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.625rem 1rem;
+    background-color: var(--color-gray-light);
+    border-radius: 0.5rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    transition: 0.3s ease;
+    white-space: nowrap;
+    font-size: 0.95rem;
+}
+
+.btn-phone:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    transform: translateY(-2px);
+}
+
+.btn {
+    padding: 0.625rem 1.25rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+/* === CORRECTION IMAGES CENTRÉES === */
+
+/* Toutes les images centrées par défaut */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Logo centré dans footer */
+.footer-logo img {
+    margin: 0;
+    display: inline-block;
+}
+
+/* Images des cartes de service */
+.service-card img,
+.blog-card-image img,
+.feature-item img {
+    margin: 0 auto;
+}
+
+/* Images hero parfaitement centrées */
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Images dans articles de blog */
+.article-image {
+    margin: 2rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.article-image img {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Images de témoignages */
+.author-avatar {
+    margin: 0;
+    display: inline-flex;
+}
+
+/* === RESPONSIVE AMÉLIORÉ === */
+
+@media (max-width: 1200px) {
+    .nav-list {
+        gap: 1.5rem;
+    }
+    
+    .header-content {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .nav {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background-color: white;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        display: none;
+        padding: 1.5rem 0;
+        z-index: 999;
+    }
+    
+    .nav.active {
+        display: block;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: stretch;
+        padding: 0 1.5rem;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 0.75rem 1rem;
+        border-radius: 0.5rem;
+    }
+    
+    .nav-link:hover {
+        background-color: var(--color-gray-light);
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        font-size: 1.5rem;
+        color: var(--color-primary);
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+    
+    .mobile-menu-toggle:hover {
+        background-color: var(--color-gray-light);
+        border-radius: 0.5rem;
+    }
+    
+    .header-content {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .header-content {
+        padding: 0.75rem 0;
+    }
+    
+    .logo img {
+        height: 38px;
+    }
+    
+    .logo-text {
+        font-size: 1.25rem;
+    }
+    
+    .btn-phone {
+        display: none;
+    }
+    
+    .header-actions .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+    
+    /* Images sur mobile toujours centrées */
+    img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content {
+        padding: 0.625rem 0;
+        gap: 0.75rem;
+    }
+    
+    .logo img {
+        height: 35px;
+    }
+    
+    .logo-text {
+        font-size: 1.125rem;
+    }
+    
+    .header-actions .btn {
+        padding: 0.5rem 0.875rem;
+        font-size: 0.813rem;
+    }
+}
+
+/* === CORRECTION ESPACEMENT SECTIONS === */
+section {
+    padding: 4rem 0;
+}
+
+@media (max-width: 768px) {
+    section {
+        padding: 3rem 0;
+    }
+}
+
+/* === FIX CONTENEUR === */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+}
+
+/* === AMÉLIORATION BOUTONS === */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    border: none;
+    white-space: nowrap;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    box-shadow: 0 4px 6px rgba(44, 95, 157, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(44, 95, 157, 0.3);
+}
+
+.btn-secondary {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    box-shadow: 0 4px 6px rgba(0, 168, 232, 0.2);
+}
+
+.btn-secondary:hover {
+    background-color: #0088bb;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 168, 232, 0.3);
+}
+
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid var(--color-primary);
+    color: var(--color-primary);
+}
+
+.btn-outline:hover {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.btn-white {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn-white:hover {
+    background-color: var(--color-gray-light);
+    transform: translateY(-2px);
+}
+
+/* === FIX HERO BADGES === */
+.hero-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    margin-bottom: 2rem;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.25rem;
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    .hero-badges {
+        justify-content: center;
+    }
+}

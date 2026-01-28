@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="FAQ DriveFlow : Toutes vos questions sur le convoyage automobile. Prix, délais, assurance, réglementation. Réponses d'experts 2026.">
+    <title>FAQ Complète - Questions Convoyage Automobile | DriveFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fixes.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        .faq-hero { background: linear-gradient(135deg, #2C5F9D, #00A8E8); color: white; padding: 4rem 0; text-align: center; }
+        .faq-hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; }
+        .faq-container { max-width: 900px; margin: 4rem auto; padding: 0 1.5rem; }
+        .faq-search { margin-bottom: 3rem; }
+        .faq-search input { width: 100%; padding: 1rem 1.5rem; font-size: 1.125rem; border: 2px solid #e9ecef; border-radius: 0.75rem; transition: 0.3s; }
+        .faq-search input:focus { outline: none; border-color: #2C5F9D; box-shadow: 0 0 0 3px rgba(44,95,157,0.1); }
+        .faq-category { margin-bottom: 3rem; }
+        .faq-category h2 { color: #2C5F9D; font-size: 1.75rem; margin-bottom: 1.5rem; padding-bottom: 0.75rem; border-bottom: 3px solid #2C5F9D; display: flex; align-items: center; gap: 0.75rem; }
+        .faq-item { background: white; border: 2px solid #e9ecef; border-radius: 0.75rem; margin-bottom: 1rem; overflow: hidden; transition: 0.3s; }
+        .faq-item:hover { border-color: #2C5F9D; box-shadow: 0 4px 12px rgba(44,95,157,0.1); }
+        .faq-question { padding: 1.5rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 600; color: #1a1a1a; transition: 0.3s; user-select: none; }
+        .faq-question:hover { color: #2C5F9D; background-color: #f8f9fa; }
+        .faq-question i { font-size: 1.25rem; color: #2C5F9D; transition: 0.3s; flex-shrink: 0; }
+        .faq-item.active .faq-question i { transform: rotate(180deg); }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; padding: 0 1.5rem; color: #6c757d; line-height: 1.8; }
+        .faq-item.active .faq-answer { max-height: 1000px; padding: 0 1.5rem 1.5rem; }
+        .faq-answer strong { color: #2C5F9D; }
+        .faq-answer ul { margin: 1rem 0; padding-left: 2rem; }
+        .faq-answer li { margin-bottom: 0.5rem; }
+        .faq-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 3rem; }
+        .faq-stat { text-align: center; padding: 2rem; background: linear-gradient(135deg, #f8f9fa, #e9ecef); border-radius: 1rem; }
+        .faq-stat-number { font-size: 3rem; font-weight: 700; color: #2C5F9D; margin-bottom: 0.5rem; }
+        .faq-stat-label { color: #6c757d; font-weight: 500; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><img src="images/logo.png" alt="DriveFlow"><span class="logo-text">DriveFlow</span></div>
+                <nav class="nav"><ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="professionnels.html" class="nav-link">Professionnels</a></li>
+                    <li><a href="particuliers.html" class="nav-link">Particuliers</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li><a href="faq.html" class="nav-link active">FAQ</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul></nav>
+                <div class="header-actions">
+                    <a href="tel:+33651507834" class="btn-phone"><i class="fas fa-phone"></i> 06 51 50 78 34</a>
+                    <a href="devis.html" class="btn btn-primary">Devis gratuit</a>
+                </div>
+                <button class="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="faq-hero">
+        <div class="container">
+            <h1>FAQ Complète</h1>
+            <p style="font-size: 1.25rem;">Toutes vos questions sur le convoyage automobile</p>
+        </div>
+    </div>
+
+    <div class="faq-container">
+        <div class="faq-search">
+            <input type="text" id="faqSearch" placeholder="🔍 Rechercher une question..." aria-label="Rechercher dans la FAQ">
+        </div>
+
+        <div class="faq-stats">
+            <div class="faq-stat">
+                <div class="faq-stat-number">24/7</div>
+                <div class="faq-stat-label">Disponibilité</div>
+            </div>
+            <div class="faq-stat">
+                <div class="faq-stat-number">100%</div>
+                <div class="faq-stat-label">Assuré</div>
+            </div>
+            <div class="faq-stat">
+                <div class="faq-stat-number">∞</div>
+                <div class="faq-stat-label">Distance illimitée</div>
+            </div>
+        </div>
+
+        <!-- Catégorie 1 : Services Généraux -->
+        <div class="faq-category">
+            <h2><i class="fas fa-car"></i> Services Généraux</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Quelle distance pouvez-vous couvrir pour un convoyage ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Nous couvrons <strong>TOUTES les distances sans aucune limite</strong> : France métropolitaine, Europe et même International.</p>
+                    <p>Exemples :</p>
+                    <ul>
+                        <li>🇫🇷 <strong>France</strong> : De 10 km à 1000+ km</li>
+                        <li>🇪🇺 <strong>Europe</strong> : Paris-Berlin, Lyon-Barcelone, etc.</li>
+                        <li>🌍 <strong>International</strong> : Sur devis personnalisé</li>
+                    </ul>
+                    <p>Que ce soit 50 km ou 5000 km, nous assurons le convoyage de votre véhicule en toute sécurité avec la même rigueur professionnelle.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Quels types de véhicules convoyez-vous ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Nous convoyons <strong>tous types de véhicules</strong>, quelle que soit leur catégorie :</p>
+                    <ul>
+                        <li>🚗 <strong>Voitures particulières</strong> : citadines, berlines, breaks</li>
+                        <li>🚙 <strong>SUV et 4x4</strong> : tous modèles</li>
+                        <li>🚚 <strong>Véhicules utilitaires</strong> : fourgons, camionnettes</li>
+                        <li>💎 <strong>Véhicules de luxe et de collection</strong> : Ferrari, Porsche, anciennes</li>
+                        <li>🏍️ <strong>Motos et scooters</strong> : avec équipement adapté</li>
+                        <li>🚐 <strong>Camping-cars</strong> : selon dimensions</li>
+                    </ul>
+                    <p>Chaque convoyage est adapté aux spécificités du véhicule pour garantir sa sécurité.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Quel est le délai de livraison ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Le délai dépend de la distance à parcourir :</p>
+                    <ul>
+                        <li>📍 <strong>Moins de 200 km</strong> : 24h</li>
+                        <li>📍 <strong>200-500 km</strong> : 24-48h</li>
+                        <li>📍 <strong>500-1000 km</strong> : 48-72h</li>
+                        <li>📍 <strong>Plus de 1000 km ou Europe</strong> : 3-7 jours</li>
+                    </ul>
+                    <p><strong>Service express disponible</strong> pour les urgences (supplément tarifaire).</p>
+                    <p>💡 <strong>Astuce</strong> : Réservez à l'avance pour les dates souhaitées et bénéficiez de meilleurs tarifs.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Mon véhicule est-il assuré pendant le transport ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Oui, absolument !</strong> Tous nos convoyages incluent une <strong>assurance tous risques</strong>.</p>
+                    <p><strong>Couverture complète :</strong></p>
+                    <ul>
+                        <li>✅ Dommages accidentels</li>
+                        <li>✅ Vol du véhicule</li>
+                        <li>✅ Bris de glace</li>
+                        <li>✅ Incendie</li>
+                        <li>✅ Événements climatiques</li>
+                    </ul>
+                    <p>📸 <strong>État des lieux systématique</strong> : Photos avant/après le transport pour votre tranquillité.</p>
+                    <p>📄 <strong>Attestation fournie</strong> : Vous recevez une copie de l'assurance avant le départ.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Proposez-vous un suivi en temps réel du convoyage ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Oui !</strong> Nous proposons un <strong>suivi GPS en temps réel</strong> de votre véhicule.</p>
+                    <p><strong>Ce que vous recevez :</strong></p>
+                    <ul>
+                        <li>📍 Lien de suivi GPS (position actuelle du véhicule)</li>
+                        <li>🕐 Heure d'arrivée estimée mise à jour</li>
+                        <li>📞 Coordonnées directes du convoyeur</li>
+                        <li>📧 Notifications SMS/Email aux étapes clés</li>
+                    </ul>
+                    <p>Vous gardez ainsi le contrôle et la visibilité totale sur le transport de votre véhicule.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Catégorie 2 : Prix et Tarifs -->
+        <div class="faq-category">
+            <h2><i class="fas fa-euro-sign"></i> Prix et Tarifs</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Comment sont calculés vos tarifs ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Nos tarifs sont calculés en fonction de <strong>plusieurs critères</strong> :</p>
+                    <p><strong>1. Distance parcourue</strong> (facteur principal) :</p>
+                    <ul>
+                        <li>Moins de 100 km : 80-150€</li>
+                        <li>100-300 km : 150-300€</li>
+                        <li>300-500 km : 300-450€</li>
+                        <li>500-1000 km : 450-800€</li>
+                        <li>Plus de 1000 km : sur devis</li>
+                    </ul>
+                    <p><strong>2. Type de véhicule</strong> :</p>
+                    <ul>
+                        <li>Citadine/Berline : tarif standard</li>
+                        <li>SUV/4x4 : +10-15%</li>
+                        <li>Luxe/Collection : +20-30%</li>
+                        <li>Utilitaire : tarif spécifique</li>
+                    </ul>
+                    <p><strong>3. Délai souhaité</strong> :</p>
+                    <ul>
+                        <li>Standard (48-72h) : tarif normal</li>
+                        <li>Express (24h) : +30-50%</li>
+                        <li>Urgence (< 12h) : sur devis</li>
+                    </ul>
+                    <p><strong>4. Contraintes géographiques</strong> : Îles, zones difficiles d'accès (supplément éventuel).</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Proposez-vous des forfaits pour professionnels ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Oui !</strong> Nous proposons des <strong>abonnements mensuels sur mesure</strong> pour les professionnels.</p>
+                    <p><strong>Avantages des forfaits pros :</strong></p>
+                    <ul>
+                        <li>💰 Tarifs préférentiels dégressifs</li>
+                        <li>⚡ Priorité d'intervention</li>
+                        <li>📊 Facturation mensuelle groupée</li>
+                        <li>📈 Reporting détaillé</li>
+                        <li>☎️ Interlocuteur dédié</li>
+                    </ul>
+                    <p><strong>Idéal pour :</strong></p>
+                    <ul>
+                        <li>🏢 Concessionnaires (livraisons après vente)</li>
+                        <li>🔧 Garages (prise en charge/livraison clients)</li>
+                        <li>🚗 Loueurs de véhicules (rotation flotte)</li>
+                        <li>🏭 Gestionnaires de flottes</li>
+                    </ul>
+                    <p>📞 <strong>Contactez-nous pour un devis personnalisé</strong> : 06 51 50 78 34</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Quels moyens de paiement acceptez-vous ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Nous acceptons <strong>tous les moyens de paiement courants</strong> :</p>
+                    <p><strong>Particuliers :</strong></p>
+                    <ul>
+                        <li>💳 Carte bancaire (CB, Visa, Mastercard)</li>
+                        <li>🏦 Virement bancaire</li>
+                        <li>💶 Espèces (jusqu'à 1000€)</li>
+                        <li>📝 Chèque</li>
+                    </ul>
+                    <p><strong>Professionnels :</strong></p>
+                    <ul>
+                        <li>🏢 Virement bancaire (avec RIB)</li>
+                        <li>📄 Paiement à échéance (30/60 jours)</li>
+                        <li>📊 Facturation mensuelle groupée</li>
+                    </ul>
+                    <p>💡 <strong>Paiement sécurisé</strong> : Toutes les transactions sont sécurisées et tracées.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Y a-t-il des frais cachés ou supplémentaires ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Non, aucun frais caché !</strong> Nous pratiquons une <strong>tarification 100% transparente</strong>.</p>
+                    <p><strong>Le prix annoncé inclut :</strong></p>
+                    <ul>
+                        <li>✅ Assurance tous risques</li>
+                        <li>✅ Kilométrage complet</li>
+                        <li>✅ Carburant</li>
+                        <li>✅ Péages autoroutiers</li>
+                        <li>✅ État des lieux photos</li>
+                        <li>✅ Suivi GPS</li>
+                    </ul>
+                    <p><strong>Suppléments possibles (annoncés à l'avance) :</strong></p>
+                    <ul>
+                        <li>⚡ Service express (< 24h)</li>
+                        <li>🏝️ Zones insulaires (ferry)</li>
+                        <li>🌙 Convoyage de nuit (sur demande)</li>
+                    </ul>
+                    <p>📋 <strong>Devis détaillé fourni</strong> avant toute intervention.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Catégorie 3 : Réglementation et Sécurité -->
+        <div class="faq-category">
+            <h2><i class="fas fa-shield-alt"></i> Réglementation et Sécurité</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Qu'est-ce qu'une plaque W Garage ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>La <strong>plaque W Garage</strong> est une plaque d'immatriculation professionnelle délivrée par la préfecture.</p>
+                    <p><strong>À quoi sert-elle ?</strong></p>
+                    <ul>
+                        <li>✅ Permet aux professionnels de circuler légalement avec des véhicules non immatriculés</li>
+                        <li>✅ Utilisée pour les essais, convoyages et déplacements professionnels</li>
+                        <li>✅ Obligation légale pour le transport de véhicules</li>
+                    </ul>
+                    <p><strong>Pourquoi c'est important pour vous ?</strong></p>
+                    <p>Un convoyage avec plaque W = <strong>légalité garantie</strong>, assurance valide, professionnalisme certifié.</p>
+                    <p>⚠️ <strong>Attention</strong> : Un convoyeur sans plaque W est <strong>illégal</strong> et votre véhicule n'est pas couvert en cas de problème !</p>
+                    <p>✅ <strong>DriveFlow</strong> utilise exclusivement des plaques W officielles.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Vos convoyeurs sont-ils certifiés et expérimentés ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Oui, tous nos convoyeurs sont certifiés et rigoureusement sélectionnés.</strong></p>
+                    <p><strong>Nos critères de sélection :</strong></p>
+                    <ul>
+                        <li>🎓 <strong>Permis de conduire professionnel</strong> valide</li>
+                        <li>📜 <strong>Formation spécialisée</strong> au convoyage</li>
+                        <li>⭐ <strong>Expérience minimum</strong> de 3 ans</li>
+                        <li>🔍 <strong>Vérification casier judiciaire</strong></li>
+                        <li>✅ <strong>Certification conduite sécurisée</strong></li>
+                    </ul>
+                    <p><strong>Formations continues :</strong></p>
+                    <ul>
+                        <li>Manipulation de véhicules de luxe</li>
+                        <li>Conduite défensive</li>
+                        <li>Gestion des situations d'urgence</li>
+                    </ul>
+                    <p>🏆 <strong>Résultat</strong> : Vous confiez votre véhicule à de vrais professionnels de la route.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Que se passe-t-il en cas d'accident ou de panne durant le transport ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Nous avons un protocole d'urgence complet</strong> pour gérer toute situation.</p>
+                    <p><strong>En cas d'accident :</strong></p>
+                    <ul>
+                        <li>🚨 Intervention immédiate du convoyeur</li>
+                        <li>📞 Notification instantanée au client</li>
+                        <li>📸 Constat amiable + photos détaillées</li>
+                        <li>🛡️ Activation de l'assurance tous risques</li>
+                        <li>🚗 Véhicule de remplacement si nécessaire</li>
+                        <li>📋 Prise en charge complète des démarches</li>
+                    </ul>
+                    <p><strong>En cas de panne mécanique :</strong></p>
+                    <ul>
+                        <li>🔧 Diagnostic immédiat</li>
+                        <li>🚚 Remorquage vers garage agréé</li>
+                        <li>⏱️ Nouveau délai de livraison communiqué</li>
+                        <li>💰 Aucun surcoût pour le client</li>
+                    </ul>
+                    <p><strong>Votre garantie</strong> : Transparence totale et communication permanente.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Catégorie 4 : Réservation et Organisation -->
+        <div class="faq-category">
+            <h2><i class="fas fa-calendar-check"></i> Réservation et Organisation</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Comment réserver un convoyage ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>3 méthodes simples</strong> pour réserver votre convoyage :</p>
+                    <p><strong>1️⃣ En ligne (le plus rapide)</strong></p>
+                    <ul>
+                        <li>📝 Remplissez le <a href="devis.html" style="color: #2C5F9D; font-weight: 600;">formulaire de devis</a></li>
+                        <li>⏱️ Réponse sous 2h (jours ouvrés)</li>
+                        <li>✅ Validation en 1 clic</li>
+                    </ul>
+                    <p><strong>2️⃣ Par téléphone</strong></p>
+                    <ul>
+                        <li>📞 Appelez le <strong>06 51 50 78 34</strong></li>
+                        <li>🕐 Disponible 24/7</li>
+                        <li>⚡ Devis immédiat par téléphone</li>
+                    </ul>
+                    <p><strong>3️⃣ Par email</strong></p>
+                    <ul>
+                        <li>✉️ <strong>driveflow.contact@gmail.com</strong></li>
+                        <li>📋 Précisez : départ, arrivée, date, type véhicule</li>
+                        <li>⏱️ Réponse sous 24h</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Quel délai pour réserver un convoyage ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Flexibilité totale selon vos besoins :</strong></p>
+                    <p><strong>Réservation à l'avance (recommandé) :</strong></p>
+                    <ul>
+                        <li>📅 <strong>7-15 jours avant</strong> : Meilleurs tarifs et disponibilité garantie</li>
+                        <li>💰 Possibilité de négocier le prix</li>
+                        <li>🎯 Choix de la date et l'horaire précis</li>
+                    </ul>
+                    <p><strong>Réservation courte :</strong></p>
+                    <ul>
+                        <li>⚡ <strong>48-72h avant</strong> : Disponibilité selon planning</li>
+                        <li>💶 Tarif standard</li>
+                    </ul>
+                    <p><strong>Urgence :</strong></p>
+                    <ul>
+                        <li>🚨 <strong>Jour même / 24h</strong> : Service express disponible</li>
+                        <li>💰 Supplément express (+30-50%)</li>
+                        <li>📞 Appelez-nous directement : 06 51 50 78 34</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Quels documents dois-je fournir pour le convoyage ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Documents obligatoires</strong> pour un convoyage légal :</p>
+                    <p><strong>Pour le véhicule :</strong></p>
+                    <ul>
+                        <li>📄 <strong>Carte grise</strong> (certificat d'immatriculation) - Original ou copie</li>
+                        <li>🛡️ <strong>Attestation d'assurance</strong> en cours de validité</li>
+                        <li>🔑 <strong>Clés du véhicule</strong> (+ double si possible)</li>
+                        <li>📋 <strong>Contrôle technique</strong> (si véhicule > 4 ans)</li>
+                    </ul>
+                    <p><strong>Pour vous (propriétaire) :</strong></p>
+                    <ul>
+                        <li>🪪 <strong>Pièce d'identité</strong> valide (CNI ou passeport)</li>
+                        <li>✍️ <strong>Procuration</strong> (si vous n'êtes pas présent)</li>
+                    </ul>
+                    <p><strong>Cas particulier - Véhicule non immatriculé :</strong></p>
+                    <ul>
+                        <li>📝 Autorisation de circuler (WW)</li>
+                        <li>📄 Certificat de cession</li>
+                    </ul>
+                    <p>💡 <strong>Conseil</strong> : Préparez ces documents à l'avance pour accélérer le processus.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Puis-je annuler ou modifier ma réservation ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Oui, avec des conditions flexibles.</strong></p>
+                    <p><strong>Annulation :</strong></p>
+                    <ul>
+                        <li>✅ <strong>Plus de 48h avant</strong> : Annulation gratuite, remboursement intégral</li>
+                        <li>⚠️ <strong>24-48h avant</strong> : Frais de 30% du montant</li>
+                        <li>❌ <strong>Moins de 24h avant</strong> : Frais de 50% (sauf cas de force majeure)</li>
+                    </ul>
+                    <p><strong>Modification :</strong></p>
+                    <ul>
+                        <li>📅 Changement de date : Gratuit si disponibilité</li>
+                        <li>📍 Changement d'adresse : Possible avec ajustement tarifaire</li>
+                        <li>🚗 Changement de véhicule : Nouveau devis si catégorie différente</li>
+                    </ul>
+                    <p><strong>Cas de force majeure :</strong></p>
+                    <p>Annulation gratuite en cas d'événement imprévu justifié (accident, maladie, etc.)</p>
+                    <p>📞 <strong>Pour modifier/annuler</strong> : Contactez-nous au 06 51 50 78 34</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Catégorie 5 : Questions Techniques -->
+        <div class="faq-category">
+            <h2><i class="fas fa-cog"></i> Questions Techniques</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    Convoyez-vous des véhicules en panne ou accidentés ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Cela dépend du type de problème.</strong></p>
+                    <p><strong>Véhicules en panne :</strong></p>
+                    <ul>
+                        <li>✅ <strong>Panne mineure</strong> (batterie, pneu) : Convoyage possible après réparation rapide</li>
+                        <li>✅ <strong>Panne roulante</strong> : Le véhicule peut rouler → Convoyage OK</li>
+                        <li>❌ <strong>Panne immobilisante</strong> : Le véhicule ne roule pas → Transport sur plateau nécessaire</li>
+                    </ul>
+                    <p><strong>Véhicules accidentés :</strong></p>
+                    <ul>
+                        <li>✅ <strong>Dommages légers</strong> (carrosserie) + roule normalement → Convoyage possible</li>
+                        <li>❌ <strong>Dommages importants</strong> → Remorquage ou transport sur plateau recommandé</li>
+                    </ul>
+                    <p><strong>Notre solution :</strong></p>
+                    <p>🚚 Nous pouvons organiser un <strong>transport sur plateau</strong> via nos partenaires si le convoyage n'est pas possible.</p>
+                    <p>📞 <strong>Appelez-nous</strong> pour évaluer votre situation : 06 51 50 78 34</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Le kilométrage de mon véhicule va-t-il augmenter ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Oui, le kilométrage augmentera</strong> de la distance parcourue.</p>
+                    <p><strong>Explication :</strong></p>
+                    <p>Le convoyage consiste à <strong>conduire</strong> votre véhicule de A à B. Le kilométrage augmente donc naturellement.</p>
+                    <p><strong>Impact :</strong></p>
+                    <ul>
+                        <li>📏 Paris-Lyon (450 km) = +450 km au compteur</li>
+                        <li>📏 Caen-Marseille (950 km) = +950 km au compteur</li>
+                    </ul>
+                    <p><strong>Avantages par rapport au transport sur plateau :</strong></p>
+                    <ul>
+                        <li>💰 <strong>Prix</strong> : 50-70% moins cher que le plateau</li>
+                        <li>⚡ <strong>Rapidité</strong> : Plus rapide (pas de chargement/déchargement)</li>
+                        <li>🛡️ <strong>Sécurité</strong> : Conduite professionnelle avec assurance tous risques</li>
+                    </ul>
+                    <p><strong>Alternative si kilométrage critique :</strong></p>
+                    <p>🚛 Pour véhicules de collection ou très faible kilométrage, nous pouvons organiser un <strong>transport sur plateau</strong> (tarif sur devis).</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Puis-je laisser des affaires dans le véhicule durant le transport ?
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p><strong>Déconseillé, mais possible sous conditions.</strong></p>
+                    <p><strong>❌ Fortement déconseillé :</strong></p>
+                    <ul>
+                        <li>Objets de valeur (bijoux, argent, électronique)</li>
+                        <li>Documents importants (papiers d'identité, cartes bancaires)</li>
+                        <li>Objets fragiles</li>
+                    </ul>
+                    <p><strong>✅ Acceptable (avec déclaration) :</strong></p>
+                    <ul>
+                        <li>Équipements du véhicule (câbles, gilet, triangle)</li>
+                        <li>Pièces détachées liées au véhicule</li>
+                        <li>Petits objets personnels non précieux</li>
+                    </ul>
+                    <p><strong>⚠️ Important :</strong></p>
+                    <ul>
+                        <li>📋 Toute affaire laissée doit être <strong>déclarée</strong> dans l'état des lieux</li>
+                        <li>🛡️ L'assurance ne couvre <strong>pas</strong> les objets personnels</li>
+                        <li>⚖️ DriveFlow décline toute responsabilité en cas de vol/dommage d'objets non déclarés</li>
+                    </ul>
+                    <p>💡 <strong>Recommandation</strong> : Videz votre véhicule avant le convoyage.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Final -->
+        <div style="text-align: center; margin: 4rem 0; padding: 3rem; background: linear-gradient(135deg, #2C5F9D, #00A8E8); border-radius: 1rem; color: white;">
+            <h2 style="margin-bottom: 1rem; font-size: 2rem;">Vous ne trouvez pas votre réponse ?</h2>
+            <p style="margin-bottom: 2rem; font-size: 1.125rem; opacity: 0.95;">Contactez-nous, nous serons ravis de vous aider !</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="tel:+33651507834" class="btn btn-white btn-lg" style="background: white; color: #2C5F9D;"><i class="fas fa-phone"></i> 06 51 50 78 34</a>
+                <a href="contact.html" class="btn btn-primary btn-lg" style="background: white; color: #2C5F9D; border: 2px solid white;"><i class="fas fa-envelope"></i> Nous contacter</a>
+                <a href="devis.html" class="btn btn-secondary btn-lg" style="background: #FF6B35; color: white;"><i class="fas fa-file-invoice"></i> Devis gratuit</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER COMPLET ENRICHI -->
+    <footer class="footer" style="background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%); color: rgba(255,255,255,0.8); padding: 4rem 0 2rem;">
+        <div class="container">
+            <!-- Section principale du footer -->
+            <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+                
+                <!-- Colonne 1 : À propos -->
+                <div class="footer-column">
+                    <div class="footer-logo" style="margin-bottom: 1.5rem;">
+                        <img src="images/logo.png" alt="DriveFlow Logo" style="height: 50px; filter: brightness(0) invert(1);">
+                        <span style="font-size: 1.75rem; font-weight: 700; color: white; display: block; margin-top: 0.75rem;">DriveFlow</span>
+                    </div>
+                    <p class="footer-tagline" style="font-weight: 600; color: white; margin-bottom: 1rem; font-size: 1.125rem;">Votre véhicule, notre expertise</p>
+                    <p style="line-height: 1.8; margin-bottom: 1.5rem;">Service professionnel de convoyage de véhicules en France, Europe et International. Disponibilité 24/7, assurance tous risques incluse, convoyeurs certifiés.</p>
+                    
+                    <!-- Réseaux sociaux -->
+                    <div style="margin-top: 1.5rem;">
+                        <p style="font-weight: 600; color: white; margin-bottom: 1rem;">Suivez-nous</p>
+                        <div class="footer-social" style="display: flex; gap: 1rem;">
+                            <a href="#" style="width: 45px; height: 45px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s;" onmouseover="this.style.background='#2C5F9D'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+                                <i class="fab fa-facebook" style="font-size: 1.25rem; color: white;"></i>
+                            </a>
+                            <a href="#" style="width: 45px; height: 45px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s;" onmouseover="this.style.background='#2C5F9D'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+                                <i class="fab fa-instagram" style="font-size: 1.25rem; color: white;"></i>
+                            </a>
+                            <a href="#" style="width: 45px; height: 45px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s;" onmouseover="this.style.background='#2C5F9D'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+                                <i class="fab fa-linkedin" style="font-size: 1.25rem; color: white;"></i>
+                            </a>
+                            <a href="#" style="width: 45px; height: 45px; background: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: 0.3s;" onmouseover="this.style.background='#2C5F9D'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
+                                <i class="fab fa-twitter" style="font-size: 1.25rem; color: white;"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Colonne 2 : Navigation -->
+                <div class="footer-column">
+                    <h3 style="color: white; font-weight: 600; margin-bottom: 1.5rem; font-size: 1.25rem; border-bottom: 2px solid #2C5F9D; padding-bottom: 0.75rem;">Navigation</h3>
+                    <ul class="footer-links" style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.75rem;"><a href="index.html" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'; this.style.paddingLeft='5px'" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.paddingLeft='0'">🏠 Accueil</a></li>
+                        <li style="margin-bottom: 0.75rem;"><a href="professionnels.html" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'; this.style.paddingLeft='5px'" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.paddingLeft='0'">🏢 Professionnels</a></li>
+                        <li style="margin-bottom: 0.75rem;"><a href="particuliers.html" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'; this.style.paddingLeft='5px'" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.paddingLeft='0'">👤 Particuliers</a></li>
+                        <li style="margin-bottom: 0.75rem;"><a href="services.html" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'; this.style.paddingLeft='5px'" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.paddingLeft='0'">🚗 Services</a></li>
+                        <li style="margin-bottom: 0.75rem;"><a href="blog.html" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'; this.style.paddingLeft='5px'" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.paddingLeft='0'">📝 Blog</a></li>
+                        <li style="margin-bottom: 0.75rem;"><a href="faq.html" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'; this.style.paddingLeft='5px'" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.paddingLeft='0'">❓ FAQ</a></li>
+                        <li style="margin-bottom: 0.75rem;"><a href="a-propos.html" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'; this.style.paddingLeft='5px'" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.paddingLeft='0'">ℹ️ À propos</a></li>
+                        <li style="margin-bottom: 0.75rem;"><a href="contact.html" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'; this.style.paddingLeft='5px'" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.paddingLeft='0'">📞 Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Colonne 3 : Services -->
+                <div class="footer-column">
+                    <h3 style="color: white; font-weight: 600; margin-bottom: 1.5rem; font-size: 1.25rem; border-bottom: 2px solid #2C5F9D; padding-bottom: 0.75rem;">Nos Services</h3>
+                    <ul class="footer-links" style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 0.75rem;"><a href="professionnels.html" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'; this.style.paddingLeft='5px'" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.paddingLeft='0'">Concessionnaires</a></li>
+                        <li style="margin-bottom: 0.75rem;"><a href="professionnels.html" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'; this.style.paddingLeft='5px'" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.paddingLeft='0'">Garages & Centres auto</a></li>
+                        <li style="margin-bottom: 0.75rem;"><a href="professionnels.html" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'; this.style.paddingLeft='5px'" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.paddingLeft='0'">Flottes d'entreprises</a></li>
+                        <li style="margin-bottom: 0.75rem;"><a href="professionnels.html" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'; this.style.paddingLeft='5px'" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.paddingLeft='0'">Loueurs de véhicules</a></li>
+                        <li style="margin-bottom: 0.75rem;"><a href="particuliers.html" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'; this.style.paddingLeft='5px'" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.paddingLeft='0'">Achat à distance</a></li>
+                        <li style="margin-bottom: 0.75rem;"><a href="particuliers.html" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'; this.style.paddingLeft='5px'" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.paddingLeft='0'">Véhicule en panne</a></li>
+                        <li style="margin-bottom: 0.75rem;"><a href="particuliers.html" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'; this.style.paddingLeft='5px'" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.paddingLeft='0'">Déménagement</a></li>
+                        <li style="margin-bottom: 0.75rem;"><a href="particuliers.html" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'; this.style.paddingLeft='5px'" onmouseout="this.style.color='rgba(255,255,255,0.8)'; this.style.paddingLeft='0'">Vente entre particuliers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Colonne 4 : Contact -->
+                <div class="footer-column">
+                    <h3 style="color: white; font-weight: 600; margin-bottom: 1.5rem; font-size: 1.25rem; border-bottom: 2px solid #2C5F9D; padding-bottom: 0.75rem;">Contact</h3>
+                    <ul class="footer-contact" style="list-style: none; padding: 0;">
+                        <li style="display: flex; align-items: flex-start; gap: 1rem; margin-bottom: 1.25rem;">
+                            <i class="fas fa-map-marker-alt" style="color: #00A8E8; width: 20px; font-size: 1.25rem; margin-top: 3px;"></i>
+                            <div>
+                                <strong style="color: white; display: block; margin-bottom: 0.25rem;">Siège social</strong>
+                                <span>Caen, France</span><br>
+                                <span style="font-size: 0.875rem; opacity: 0.7;">Service national et international</span>
+                            </div>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
+                            <i class="fas fa-phone" style="color: #00A8E8; width: 20px; font-size: 1.25rem;"></i>
+                            <div>
+                                <strong style="color: white; display: block; margin-bottom: 0.25rem;">Téléphone</strong>
+                                <a href="tel:+33651507834" style="color: #00A8E8; font-weight: 600; font-size: 1.125rem;">06 51 50 78 34</a><br>
+                                <span style="font-size: 0.875rem; opacity: 0.7;">Disponible 24/7</span>
+                            </div>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
+                            <i class="fas fa-envelope" style="color: #00A8E8; width: 20px; font-size: 1.25rem;"></i>
+                            <div>
+                                <strong style="color: white; display: block; margin-bottom: 0.25rem;">Email</strong>
+                                <a href="mailto:driveflow.contact@gmail.com" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='#00A8E8'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">driveflow.contact@gmail.com</a><br>
+                                <span style="font-size: 0.875rem; opacity: 0.7;">Réponse sous 24h</span>
+                            </div>
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
+                            <i class="fas fa-clock" style="color: #00A8E8; width: 20px; font-size: 1.25rem;"></i>
+                            <div>
+                                <strong style="color: white; display: block; margin-bottom: 0.25rem;">Horaires</strong>
+                                <span style="color: #28a745; font-weight: 600;">Ouvert 24h/24, 7j/7</span><br>
+                                <span style="font-size: 0.875rem; opacity: 0.7;">Jours fériés inclus</span>
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <!-- CTA Footer -->
+                    <div style="margin-top: 2rem;">
+                        <a href="devis.html" class="btn btn-primary" style="width: 100%; justify-content: center; background: linear-gradient(135deg, #2C5F9D, #00A8E8); padding: 1rem; font-size: 1.125rem;">
+                            <i class="fas fa-file-invoice"></i> Demander un devis
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Séparateur -->
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); margin: 3rem 0 2rem;"></div>
+
+            <!-- Section informations légales -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 2rem;">
+                <div>
+                    <h4 style="color: white; font-weight: 600; margin-bottom: 1rem; font-size: 1.125rem;">🏆 Nos Garanties</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.9375rem;">
+                        <li style="margin-bottom: 0.5rem;">✅ Assurance tous risques incluse</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Convoyeurs certifiés et expérimentés</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Plaques W Garage officielles</li>
+                        <li style="margin-bottom: 0.5rem;">✅ Suivi GPS en temps réel</li>
+                        <li style="margin-bottom: 0.5rem;">✅ État des lieux photo avant/après</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 style="color: white; font-weight: 600; margin-bottom: 1rem; font-size: 1.125rem;">🌍 Zone de Couverture</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.9375rem;">
+                        <li style="margin-bottom: 0.5rem;">🇫🇷 France métropolitaine (toutes régions)</li>
+                        <li style="margin-bottom: 0.5rem;">🇪🇺 Union Européenne (27 pays)</li>
+                        <li style="margin-bottom: 0.5rem;">🌍 International (sur devis)</li>
+                        <li style="margin-bottom: 0.5rem;">🏝️ Îles françaises (Corse incluse)</li>
+                        <li style="margin-bottom: 0.5rem;">⚡ Aucune limite de distance</li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 style="color: white; font-weight: 600; margin-bottom: 1rem; font-size: 1.125rem;">📄 Informations Légales</h4>
+                    <ul style="list-style: none; padding: 0; font-size: 0.9375rem;">
+                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">Mentions légales</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">Politique de confidentialité</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">Conditions générales de vente</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="#" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">Politique de cookies</a></li>
+                        <li style="margin-bottom: 0.5rem;"><a href="sitemap.xml" style="color: rgba(255,255,255,0.8); transition: 0.3s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.8)'">Plan du site</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Séparateur final -->
+            <div style="border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1.5rem;">
+                <div>
+                    <p style="margin: 0; font-size: 0.9375rem;">&copy; 2026 <strong style="color: white;">DriveFlow</strong> - Convoyage professionnel de véhicules. Tous droits réservés.</p>
+                    <p style="margin: 0.5rem 0 0; font-size: 0.875rem; opacity: 0.7;">SIRET : [À remplir] | APE : 4941C | RC Pro : [À remplir]</p>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;">
+                    <span style="font-size: 0.875rem; opacity: 0.7;">Paiement sécurisé :</span>
+                    <div style="display: flex; gap: 0.75rem;">
+                        <i class="fab fa-cc-visa" style="font-size: 2rem; opacity: 0.7;"></i>
+                        <i class="fab fa-cc-mastercard" style="font-size: 2rem; opacity: 0.7;"></i>
+                        <i class="fas fa-university" style="font-size: 1.75rem; opacity: 0.7; margin-top: 3px;"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Badge confiance -->
+            <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05);">
+                <p style="font-size: 0.875rem; opacity: 0.6; margin: 0;">
+                    🔒 Site sécurisé SSL • 🛡️ Données protégées RGPD • ⭐ Service professionnel certifié • 🚗 Leader du convoyage automobile
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="chatbot" id="chatbot">
+        <div class="chatbot-header">
+            <i class="fas fa-comments"></i>
+            <span>Aide en ligne</span>
+            <button class="chatbot-close" id="chatbotClose"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="chatbot-messages" id="chatbotMessages">
+            <div class="chatbot-message bot"><p>Bonjour ! 👋 Comment puis-je vous aider ?</p></div>
+        </div>
+        <div class="chatbot-quick-questions">
+            <button class="quick-question" data-question="distance">Quelle distance pouvez-vous couvrir ?</button>
+            <button class="quick-question" data-question="vehicules">Quels types de véhicules convoyez-vous ?</button>
+            <button class="quick-question" data-question="delai">Quel est le délai de livraison ?</button>
+            <button class="quick-question" data-question="devis">Comment obtenir un devis ?</button>
+        </div>
+    </div>
+
+    <button class="chatbot-trigger" id="chatbotTrigger">
+        <i class="fas fa-comments"></i>
+        <span class="chatbot-badge">1</span>
+    </button>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Recherche dans la FAQ
+        document.getElementById('faqSearch').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-answer').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                    if (searchTerm.length > 2) {
+                        item.classList.add('active');
+                    }
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+# robots.txt pour DriveFlow - Optimisation SEO
+User-agent: *
+Allow: /
+Sitemap: https://driveflow.fr/sitemap.xml
+Allow: /index.html
+Allow: /professionnels.html
+Allow: /particuliers.html
+Allow: /services.html
+Allow: /devis.html
+Allow: /blog.html
+Allow: /blog/
+Allow: /css/
+Allow: /js/
+Allow: /images/
+Crawl-delay: 1
+User-agent: Googlebot
+Allow: /
+User-agent: Bingbot
+Allow: /
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Google-Extended
+Allow: /

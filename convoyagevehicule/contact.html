@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - DriveFlow</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        .contact-hero { background: linear-gradient(135deg, #2C5F9D, #00A8E8); color: white; padding: 4rem 0; text-align: center; }
+        .contact-hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; }
+        .contact-content { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; padding: 4rem 0; }
+        .contact-info { background: #f8f9fa; padding: 2.5rem; border-radius: 1rem; }
+        .contact-info h2 { margin-bottom: 2rem; color: #2C5F9D; }
+        .contact-item { display: flex; align-items: flex-start; gap: 1.5rem; margin-bottom: 2rem; }
+        .contact-icon { width: 50px; height: 50px; background: linear-gradient(135deg, #2C5F9D, #00A8E8); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.5rem; flex-shrink: 0; }
+        .contact-form { background: white; padding: 2.5rem; border-radius: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 0.5rem; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 0.875rem; border: 2px solid #e9ecef; border-radius: 0.5rem; font-family: inherit; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: #2C5F9D; }
+        .submit-btn { width: 100%; padding: 1rem; background: linear-gradient(135deg, #2C5F9D, #00A8E8); color: white; font-weight: 600; border-radius: 0.5rem; border: none; cursor: pointer; font-size: 1.125rem; transition: 0.3s; }
+        .submit-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+        @media (max-width: 768px) { .contact-content { grid-template-columns: 1fr; } }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo"><img src="images/logo.png" alt="DriveFlow"><span class="logo-text">DriveFlow</span></div>
+                <nav class="nav"><ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="professionnels.html" class="nav-link">Professionnels</a></li>
+                    <li><a href="particuliers.html" class="nav-link">Particuliers</a></li>
+                    <li><a href="services.html" class="nav-link">Services</a></li>
+                    <li><a href="contact.html" class="nav-link active">Contact</a></li>
+                </ul></nav>
+                <div class="header-actions">
+                    <a href="tel:+33651507834" class="btn-phone"><i class="fas fa-phone"></i> 06 51 50 78 34</a>
+                    <a href="devis.html" class="btn btn-primary">Devis gratuit</a>
+                </div>
+                <button class="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="contact-hero">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+            <p style="font-size: 1.25rem;">Disponibles 24/7 pour répondre à vos besoins</p>
+        </div>
+    </div>
+
+    <section>
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Nos Coordonnées</h2>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h3 style="margin-bottom: 0.5rem;">Téléphone</h3>
+                            <p style="font-size: 1.125rem; color: #2C5F9D; font-weight: 600;">06 51 50 78 34</p>
+                            <p style="color: #6c757d;">Disponible 24/7</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h3 style="margin-bottom: 0.5rem;">Email</h3>
+                            <p style="font-size: 1.125rem; color: #2C5F9D; font-weight: 600;">driveflow.contact@gmail.com</p>
+                            <p style="color: #6c757d;">Réponse sous 24h</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h3 style="margin-bottom: 0.5rem;">Localisation</h3>
+                            <p style="font-size: 1.125rem; color: #2C5F9D; font-weight: 600;">Caen, France</p>
+                            <p style="color: #6c757d;">Service France, Europe, International</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
+                        <div>
+                            <h3 style="margin-bottom: 0.5rem;">Horaires</h3>
+                            <p style="font-size: 1.125rem; color: #2C5F9D; font-weight: 600;">24/7</p>
+                            <p style="color: #6c757d;">Service disponible jour et nuit</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2 style="margin-bottom: 1.5rem; color: #2C5F9D;">Envoyez-nous un message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="nom">Nom complet *</label>
+                            <input type="text" id="nom" name="nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Téléphone *</label>
+                            <input type="tel" id="telephone" name="telephone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="sujet">Sujet</label>
+                            <select id="sujet" name="sujet">
+                                <option value="devis">Demande de devis</option>
+                                <option value="info">Demande d'information</option>
+                                <option value="partenariat">Partenariat professionnel</option>
+                                <option value="reclamation">Réclamation</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-paper-plane"></i> Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo"><img src="images/logo.png" alt="DriveFlow"><span>DriveFlow</span></div>
+                    <p class="footer-tagline">Votre véhicule, notre expertise</p>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2026 DriveFlow. Tous droits réservés.</p></div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
