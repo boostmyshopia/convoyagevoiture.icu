@@ -1,18 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url><loc>https://driveflow.fr/index.html</loc><lastmod>2026-01-28</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-    <url><loc>https://driveflow.fr/professionnels.html</loc><lastmod>2026-01-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-    <url><loc>https://driveflow.fr/particuliers.html</loc><lastmod>2026-01-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-    <url><loc>https://driveflow.fr/services.html</loc><lastmod>2026-01-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://driveflow.fr/devis.html</loc><lastmod>2026-01-28</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
-    <url><loc>https://driveflow.fr/a-propos.html</loc><lastmod>2026-01-28</lastmod><changefreq>yearly</changefreq><priority>0.6</priority></url>
-    <url><loc>https://driveflow.fr/contact.html</loc><lastmod>2026-01-28</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://driveflow.fr/faq.html</loc><lastmod>2026-01-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-    <url><loc>https://driveflow.fr/blog.html</loc><lastmod>2026-01-28</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-    <url><loc>https://driveflow.fr/blog/comment-faire-convoyer-voiture.html</loc><lastmod>2026-01-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://driveflow.fr/blog/prix-convoyage-voiture.html</loc><lastmod>2026-01-12</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://driveflow.fr/blog/acheter-voiture-loin.html</loc><lastmod>2026-01-08</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-    <url><loc>https://driveflow.fr/blog/plaque-w-garage.html</loc><lastmod>2026-01-05</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-    <url><loc>https://driveflow.fr/blog/transport-voiture-panne.html</loc><lastmod>2026-01-02</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-    <url><loc>https://driveflow.fr/blog/convoyage-concessionnaires.html</loc><lastmod>2025-12-28</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <url>
+    <loc>https://convoyagevoiture.icu/</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://convoyagevoiture.icu/professionnels.html</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://convoyagevoiture.icu/particuliers.html</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://convoyagevoiture.icu/services.html</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://convoyagevoiture.icu/devis.html</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://convoyagevoiture.icu/a-propos.html</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://convoyagevoiture.icu/contact.html</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://convoyagevoiture.icu/faq.html</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://convoyagevoiture.icu/blog.html</loc>
+    <lastmod>2026-01-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
+
